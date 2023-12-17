@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// this is ui for view score
 class BoardHeader extends StatelessWidget {
   int playerNumber;
   int playerScore;

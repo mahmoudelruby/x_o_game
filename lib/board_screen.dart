@@ -25,7 +25,9 @@ class _BoardScreenState extends State<BoardScreen> {
   int player1Score = 0;
   int player2Score = 0;
 
+// this func to add x or o in button
   userButtonClickFun(int position) {
+
     setState(() {
       if (textButtonState[position].isNotEmpty) return;
       if (countOfUserButtn.isEven) {
@@ -41,7 +43,7 @@ class _BoardScreenState extends State<BoardScreen> {
         showDialog(
             context: context,
             builder: (BuildContext context) {
-              return AlertDialog(
+              return const AlertDialog(
                 title: Text("Congratualtion ^~^ "),
                 content: Text("player 1 win "),
               );
@@ -52,7 +54,7 @@ class _BoardScreenState extends State<BoardScreen> {
         showDialog(
             context: context,
             builder: (BuildContext context) {
-              return AlertDialog(
+              return const AlertDialog(
                 title: Text("Congratuation ! "),
                 content: Text("player 2 win"),
               );
@@ -61,6 +63,7 @@ class _BoardScreenState extends State<BoardScreen> {
     });
   }
 
+// this func to reset screen
   void resetBoard() {
     textButtonState = [
       '',
